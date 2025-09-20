@@ -1,0 +1,290 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+} 
+
+
+
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  /* background-color: rgb(18, 18, 62); */
+  /* background-color: rgba(35, 35, 37, 0.77); */
+  background-color: rgb(35, 35, 37); /* solid color */
+  padding: 0 10px;
+  /* position: relative; */
+  position: fixed;
+  top: 0;            /* screen ke top pe chipka rahe */
+  left: 0;
+  width: 100%;       /* full width cover kare */
+  z-index: 1000;     /* content ke upar rahe */
+}
+
+.left {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-left: 80px;
+}
+
+/* nav menu */
+.right ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.right ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.right ul li a:hover {
+  color: rgb(171, 127, 224);
+}
+
+/* hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero Section */
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15vh 5%;
+  flex-wrap: wrap;
+}
+
+
+/* .social-icons {
+  display: flex;
+  justify-content: flex-start;   
+  align-items: center;       
+  gap: 15px;                 
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-bottom:10px;
+} */
+
+.social-container {
+  display: flex;
+  flex-direction: column; /* icons upar, buttons niche */
+  align-items: flex-start;
+  gap: 5px; /* icons aur buttons ke beech gap */
+  margin-top: -90px;
+
+
+  margin-left: 100px;
+  margin-bottom:20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+
+}
+
+
+.outline-button {
+  padding: 8px 18px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #6a11cb;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.outline-button:hover {
+  background-color: #6a11cb;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+
+.firstSection>div {
+  width: 45%;
+}
+
+.leftSection {
+  font-size: 2.2rem;
+}
+
+.purple {
+  color: rgb(170, 107, 228);
+}
+
+.rightSection img {
+  width: 80%;
+  /* max-width: 300px; */
+  max-width: 400px;
+}
+
+/* Sections */
+.secondSection {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.secondSection h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: rgb(170, 107, 228);
+}
+
+/* Box Styling */
+.box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(171, 127, 224, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #0e0e1a;
+  padding: 20px;
+  text-align: center;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* hamburger toggle */
+  .menu-toggle {
+  display: block;
+  margin-left: auto; /* hamburger ko bilkul right push karega */
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  }
+
+  .right ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a2e;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .right ul.active {
+    display: flex;
+  } 
+
+
+
+  .firstSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .firstSection>div {
+    width: 100%;
+  }
+
+  .leftSection {
+    font-size: 1.8rem;
+  }
+
+  .rightSection img {
+    margin-top: 20px;
+  }
+  
+}
+
+/* for smaller screens */
+@media (max-width: 480px) {}
+  .leftSection {
+    font-size: 1.5rem;
+  }
+
+  .secondSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .social-container {
+    text-align: center;
+}
+
+
+/* animation for floating logos */
+.skills-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.skills-logos img {
+  width: 70px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Make each logo float at a different speed */
+.skills-logos img:nth-child(1) { animation-duration: 3s; }
+.skills-logos img:nth-child(2) { animation-duration: 4s; }
+.skills-logos img:nth-child(3) { animation-duration: 5s; }
+.skills-logos img:nth-child(4) { animation-duration: 3.5s; }
+.skills-logos img:nth-child(5) { animation-duration: 4.5s; }
